@@ -21,7 +21,7 @@ namespace Bookify.Domain.Booking
             DateRange duration, 
             DateTime createdOn)
         {
-            // Use teh domain service here
+            // Use teh domain service here 
         }
     }
 }
