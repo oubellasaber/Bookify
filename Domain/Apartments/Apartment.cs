@@ -7,15 +7,11 @@ namespace Bookify.Domain.Apartment
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public string Country { get; private set; }
-        public string State { get; private set; }
-        public string ZipCode { get; private set; }
-        public string City { get; private set; }
-        public string Street { get; private set; }
-        public decimal PriceAmount { get; private set; }
-        public string PriceCurrency { get; private set; }
-        public string CleaningFeeAmount { get; private set; }
-        public string CleaningFeeCurrency { get; private set; }
+        public Address Address { get; private set; }
+        public Money PriceAmount { get; private set; }
+        public Currency PriceCurrency { get; private set; }
+        public Money CleaningFeeAmount { get; private set; }
+        public Currency CleaningFeeCurrency { get; private set; }
         public DateTime? LastBookedOnUtc { get; private set; }
         public List<Amenty> Amenties { get; private set; } = new();
 
@@ -23,26 +19,18 @@ namespace Bookify.Domain.Apartment
             Guid id,
             string name, 
             string description, 
-            string country, 
-            string state, 
-            string zipCode, 
-            string city, 
-            string street, 
-            decimal priceAmount, 
-            string priceCurrency, 
-            string cleaningFeeAmount, 
-            string cleaningFeeCurrency, 
+            Address address,
+            Money priceAmount, 
+            Currency priceCurrency, 
+            Money cleaningFeeAmount, 
+            Currency cleaningFeeCurrency, 
             DateTime? lastBookedOnUtc, 
             List<Amenty> amenties) 
             : base (id)
         {
             Name = name;
             Description = description;
-            Country = country;
-            State = state;
-            ZipCode = zipCode;
-            City = city;
-            Street = street;
+            Address = address;
             PriceAmount = priceAmount;
             PriceCurrency = priceCurrency;
             CleaningFeeAmount = cleaningFeeAmount;
