@@ -4,6 +4,7 @@
     {
         public DateOnly Start { get; set; }
         public DateOnly End { get; set; }
+        public int LengthInDays => End.DayNumber - Start.DayNumber;
 
         private DateRange()
         {

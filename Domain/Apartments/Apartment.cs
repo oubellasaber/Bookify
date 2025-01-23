@@ -1,42 +1,36 @@
 ﻿using Bookify.Domain.Abstraction;
-using Bookify.Domain.Apartments;
+using Bookify.Domain.Shared;
 
-namespace Bookify.Domain.Apartment
+namespace Bookify.Domain.Apartments
 {
     public sealed class Apartment : Entity
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
         public Address Address { get; private set; }
-        public Money PriceAmount { get; private set; }
-        public Currency PriceCurrency { get; private set; }
-        public Money CleaningFeeAmount { get; private set; }
-        public Currency CleaningFeeCurrency { get; private set; }
-        public DateTime? LastBookedOnUtc { get; private set; }
-        public List<Amenty> Amenties { get; private set; } = new();
+        public Money Price { get; private set; }
+        public Money CleaningFee { get; private set; }
+        public DateTime? LastBookedOnUtc { get; internal set; }
+        public List<Amenity> Amenities { get; private set; } = new();
 
         public Apartment(
             Guid id,
             string name, 
             string description, 
             Address address,
-            Money priceAmount, 
-            Currency priceCurrency, 
-            Money cleaningFeeAmount, 
-            Currency cleaningFeeCurrency, 
+            Money price, 
+            Money cleaningFee, 
             DateTime? lastBookedOnUtc, 
-            List<Amenty> amenties) 
+            List<Amenity> amenties)
             : base (id)
         {
             Name = name;
             Description = description;
             Address = address;
-            PriceAmount = priceAmount;
-            PriceCurrency = priceCurrency;
-            CleaningFeeAmount = cleaningFeeAmount;
-            CleaningFeeCurrency = cleaningFeeCurrency;
+            Price = price;
+            CleaningFee = cleaningFee;            
             LastBookedOnUtc = lastBookedOnUtc;
-            Amenties = amenties;
+            Amenities = amenties;
         }
     }
 }

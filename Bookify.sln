@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookify.Domain", "Domain\Bookify.Domain.csproj", "{FD66F142-0CF5-4B23-ADB0-9549331C366E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{A72FD058-D6E9-45EA-A183-15329F43688E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FD66F142-0CF5-4B23-ADB0-9549331C366E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD66F142-0CF5-4B23-ADB0-9549331C366E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD66F142-0CF5-4B23-ADB0-9549331C366E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72FD058-D6E9-45EA-A183-15329F43688E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72FD058-D6E9-45EA-A183-15329F43688E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72FD058-D6E9-45EA-A183-15329F43688E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72FD058-D6E9-45EA-A183-15329F43688E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
